@@ -7,3 +7,10 @@ test("Internet main title validation", async ({ page }) => {
     await page.goto('https://the-internet.herokuapp.com/')
     await homepage.homepageMainTitleValidation()
 })
+
+test("Dropdown validation", async ({ page }) => {
+     let homepage = new Homepage(page)
+
+     await page.goto('https://the-internet.herokuapp.com/')
+     await homepage.clickOnDropdownLink()
+})
