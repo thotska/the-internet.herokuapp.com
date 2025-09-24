@@ -19,5 +19,5 @@ test('Validation of option 2 selection', async ({page}) => {
     await page.goto('https://the-internet.herokuapp.com/')
     await homepage.clickOnDropdownLink()
     await dropdownPage.selectDropdownField("Option 2")
-    await expect(dropdownPage.dropDownFieldLocator).toHaveValue("2")
+    await dropdownPage.validateOptionSelection("2")
 })

@@ -10,4 +10,7 @@ export class DropdownPage{
     async selectDropdownField(option: string): Promise<void>{
         this.dropDownFieldLocator.selectOption(option)
     }
+    async validateOptionSelection(value: string): Promise<void>{
+        await expect(this.dropDownFieldLocator).toHaveValue(value)
+    }
 }
