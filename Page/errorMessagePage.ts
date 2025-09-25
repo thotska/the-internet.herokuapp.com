@@ -1,4 +1,4 @@
-import{ expect, Locator, Page } from "@playwright/test"
+import { expect, Locator, Page } from "@playwright/test"
 
 
 export class ErrorMessagePage{
@@ -10,6 +10,6 @@ export class ErrorMessagePage{
     }
 
     async validateErrorMessage(): Promise<void>{
-        expect(this.errorMessageLocator).toHaveText("Internal Server Error")
+        await expect(this.errorMessageLocator).toHaveText("Internal Server Error")
     }
 }
