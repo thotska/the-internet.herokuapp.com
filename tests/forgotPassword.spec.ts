@@ -1,7 +1,7 @@
 import {test} from "@playwright/test"
-import { Homepage } from "../Page/Homepage"
-import { ForgotPassword } from "../Page/forgotPassword"
-import { ErrorMessagePage } from "../Page/errorMessagePage"
+import { Homepage } from "../pages/Homepage"
+import { ForgotPassword } from "../pages/forgotPassword"
+import { ErrorMessagePage } from "../pages/errorMessagePage"
 // //user foes to https://the-internet.herokuapp.com/
 // user clicks on "forgot password"
 // user types in valid email
