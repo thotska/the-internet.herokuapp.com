@@ -9,6 +9,7 @@ test("Selection of option", async ({page}) => {
     await page.goto('https://the-internet.herokuapp.com/')
     await homepage.clickOnDropdownLink()
     await dropdownPage.selectDropdownField("Option 1")
+    await dropdownPage.validateOptionSelection("1")
 })
 
 
