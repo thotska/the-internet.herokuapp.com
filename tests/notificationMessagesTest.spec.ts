@@ -10,6 +10,6 @@ test("Verification of title message and ability to click on 'click here' link ",
     await homepage.clickOnNotificationMessages()
     await notificationMessagePage.titleMessageVerification()
     await notificationMessagePage.clickingOnClickHereLink()
-    await notificationMessagePage.verifyingBlueBoxMessage("Action unsuccessful, please try again")
+    await notificationMessagePage.verifyingBlueBoxMessage(["[Action unsuccessful, please try again]"]) 
 
 })

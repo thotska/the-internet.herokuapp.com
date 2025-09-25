@@ -6,12 +6,14 @@ export class Homepage {
     dropdownLocator: Locator
     forgotPasswordLinkLocator: Locator
     notificationMessages: Locator
+    checkBoxLocator: Locator
 
     constructor(page: Page) {
         this.homepageMainTitle = page.getByRole('heading', { name: 'Welcome to the-internet' })
         this.dropdownLocator = page.getByRole('link', { name: 'Dropdown' })
         this.forgotPasswordLinkLocator = page.getByRole('link', { name: 'Forgot Password' })
         this.notificationMessages = page.getByRole('link', { name: 'Notification Messages' })
+        this.checkBoxLocator = page.getByRole('link', { name: 'Checkboxes' })
     }
 
     async homepageMainTitleValidation(): Promise<void> {
@@ -27,7 +29,9 @@ export class Homepage {
     }
     async clickOnNotificationMessages(): Promise<void> {
         await this.notificationMessages.click()
+    
     }
-
-
+    async clickOnCheckBox(): Promise<void> {
+        await this.checkBoxLocator.click()
+    }
 }

@@ -18,7 +18,8 @@ export class NotificationMessagesPage{
     async clickingOnClickHereLink(): Promise<void>{
         await this.clickHereLinkLocator.click()
     }
-    async verifyingBlueBoxMessage(message: string): Promise<void>{
-        await expect(this.blueBoxLocator).toHaveText(message)
+    async verifyingBlueBoxMessage(messages: string[]): Promise<void>{
+        let actualText = await this.blueBoxLocator.innerText()
+        await expect(messages).toBe(actualText)
     }
 }
