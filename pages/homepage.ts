@@ -5,11 +5,13 @@ export class Homepage {
     homepageMainTitle: Locator
     dropdownLocator: Locator
     forgotPasswordLinkLocator: Locator
+    notificationMessages: Locator
 
     constructor(page: Page) {
         this.homepageMainTitle = page.getByRole('heading', { name: 'Welcome to the-internet' })
         this.dropdownLocator = page.getByRole('link', { name: 'Dropdown' })
         this.forgotPasswordLinkLocator = page.getByRole('link', { name: 'Forgot Password' })
+        this.notificationMessages = page.getByRole('link', { name: 'Notification Messages' })
     }
 
     async homepageMainTitleValidation(): Promise<void> {
@@ -23,4 +25,9 @@ export class Homepage {
     async clickForgotPasswordLink(): Promise<void> {
         await this.forgotPasswordLinkLocator.click()
     }
+    async clickOnNotificationMessages(): Promise<void> {
+        await this.notificationMessages.click()
+    }
+
+
 }
