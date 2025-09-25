@@ -1,5 +1,5 @@
 import { test } from "@playwright/test"
-import { Homepage } from "../Page/Homepage"
+import { Homepage } from "../pages/Homepage"
 
 test("Internet main title validation", async ({ page }) => {
     let homepage = new Homepage(page)
